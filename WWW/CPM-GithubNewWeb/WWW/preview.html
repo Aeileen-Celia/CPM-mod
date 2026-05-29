@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>模型展示库</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: "Microsoft YaHei", sans-serif;
+    }
+
+    body{
+      background:#ffffff;
+      color:#333;
+    }
+
+    /* 顶部导航 */
+    .navbar{
+      width:100%;
+      height:70px;
+      border-bottom:1px solid #e5e5e5;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 60px;
+      background:#fff;
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+
+    .logo{
+      font-size:26px;
+      font-weight:bold;
+      color:#222;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:30px;
+    }
+
+    .nav-links a{
+      text-decoration:none;
+      color:#666;
+      transition:0.3s;
+    }
+
+    .nav-links a:hover{
+      color:#000;
+    }
+
+    /* 页面标题 */
+    .page-title{
+      max-width:1200px;
+      margin:40px auto 20px;
+      padding:0 20px;
+      font-size:42px;
+      font-weight:700;
+    }
+
+    /* 卡片区域 */
+    .container{
+      max-width:1200px;
+      margin:auto;
+      padding:20px;
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+      gap:25px;
+    }
+
+    /* 卡片 */
+    .card{
+      border:1px solid #e8e8e8;
+      border-radius:12px;
+      overflow:hidden;
+      background:#fff;
+      transition:0.25s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    .card img{
+      width:100%;
+      height:320px;
+      object-fit:cover;
+      background:#f5f5f5;
+    }
+
+    .card-content{
+      padding:18px;
+    }
+
+    .card-title{
+      font-size:20px;
+      font-weight:600;
+      margin-bottom:10px;
+    }
+
+    .card-text{
+      font-size:14px;
+      color:#666;
+      line-height:1.7;
+    }
+
+    /* 按钮 */
+    .btn{
+      margin-top:15px;
+      display:inline-block;
+      padding:10px 18px;
+      border-radius:8px;
+      background:#111;
+      color:#fff;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#333;
+    }
+
+    /* 响应式 */
+    @media(max-width:768px){
+
+      .navbar{
+        padding:0 20px;
+      }
+
+      .page-title{
+        font-size:32px;
+      }
+
+      .card img{
+        height:260px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 顶部 -->
+  <header class="navbar">
+    <div class="logo">Custom Gallery</div>
+
+    <nav class="nav-links">
+      <a href="#">首页</a>
+      <a href="#">模型库</a>
+      <a href="#">上传</a>
+      <a href="#">关于</a>
+    </nav>
+  </header>
+
+  <!-- 标题 -->
+  <div class="page-title">
+    模型展示库
+  </div>
+
+  <!-- 内容 -->
+  <section class="container">
+
+    <!-- 卡片1 -->
+    <div class="card">
+      <img src="images/thumbnail.png" alt="图片">
+      <div class="card-content">
+        <div class="card-title">角色名称</div>
+
+        <div class="card-text">
+          这里可以放角色介绍、模型说明、
+          作者信息或者其他文字内容。
+        </div>
+
+        <a href="https://wwbjl.lanzoup.com/iZkg63q1kh2f" class="btn">查看详情</a>
+      </div>
+    </div>
+
+    <!-- 卡片2 -->
+    <div class="card">
+      <img src="images/demo2.png" alt="图片">
+      <div class="card-content">
+        <div class="card-title">角色名称</div>
+
+        <div class="card-text">
+          支持插入图片、文字、按钮，
+          整体为简约白色风格。
+        </div>
+
+        <a href="#" class="btn">查看详情</a>
+      </div>
+    </div>
+
+    <!-- 卡片3 -->
+    <div class="card">
+      <img src="images/demo3.png" alt="图片">
+      <div class="card-content">
+        <div class="card-title">角色名称</div>
+
+        <div class="card-text">
+          你可以无限复制这个卡片，
+          用来展示更多内容。
+        </div>
+
+
+ 
+
+
+
+        <a href="#" class="btn">查看详情</a>
+      </div>
+    </div>
+
+
+<!-- 卡片2 -->
+    <div class="card">
+      <img src="images/demo2.png" alt="图片">
+      <div class="card-content">
+        <div class="card-title">角色名称</div>
+
+        <div class="card-text">
+          支持插入图片、文字、按钮，
+          整体为简约白色风格。
+        </div>
+
+        <a href="#" class="btn">查看详情</a>
+      </div>
+    </div>
+
+
+
+<!-- 卡片2 -->
+    <div class="card">
+      <img src="images/demo2.png" alt="图片">
+      <div class="card-content">
+        <div class="card-title">角色名称</div>
+
+        <div class="card-text">
+          支持插入图片、文字、按钮，
+          整体为简约白色风格。
+        </div>
+
+        <a href="#" class="btn">查看详情</a>
+      </div>
+    </div>
+
+
+
+
+<!-- 卡片2 -->
+    <div class="card">
+      <img src="images/demo2.png" alt="图片">
+      <div class="card-content">
+        <div class="card-title">角色名称</div>
+
+        <div class="card-text">
+          支持插入图片、文字、按钮，
+          整体为简约白色风格。
+        </div>
+
+        <a href="#" class="btn">查看详情</a>
+      </div>
+    </div>
+
+
+
+
+<!-- 卡片2 -->
+    <div class="card">
+      <img src="images/demo2.png" alt="图片">
+      <div class="card-content">
+        <div class="card-title">角色名称</div>
+
+        <div class="card-text">
+          支持插入图片、文字、按钮，
+          整体为简约白色风格。
+        </div>
+
+        <a href="#" class="btn">查看详情</a>
+      </div>
+    </div>
+
+
+
+
+<!-- 卡片2 -->
+    <div class="card">
+      <img src="images/demo2.png" alt="图片">
+      <div class="card-content">
+        <div class="card-title">角色名称</div>
+
+        <div class="card-text">
+          支持插入图片、文字、按钮，
+          整体为简约白色风格。
+        </div>
+
+        <a href="#" class="btn">查看详情</a>
+      </div>
+    </div>
+
+
+
+
+<!-- 卡片2 -->
+    <div class="card">
+      <img src="images/demo2.png" alt="图片">
+      <div class="card-content">
+        <div class="card-title">角色名称</div>
+
+        <div class="card-text">
+          支持插入图片、文字、按钮，
+          整体为简约白色风格。
+        </div>
+
+        <a href="#" class="btn">查看详情</a>
+      </div>
+    </div>
+
+
+
+
+<!-- 卡片2 -->
+    <div class="card">
+      <img src="images/demo2.png" alt="图片">
+      <div class="card-content">
+        <div class="card-title">角色名称</div>
+
+        <div class="card-text">
+          支持插入图片、文字、按钮，
+          整体为简约白色风格。
+        </div>
+
+        <a href="#" class="btn">查看详情</a>
+      </div>
+    </div>
+
+
+
+
+<!-- 卡片2 -->
+    <div class="card">
+      <img src="images/demo2.png" alt="图片">
+      <div class="card-content">
+        <div class="card-title">角色名称</div>
+
+        <div class="card-text">
+          支持插入图片、文字、按钮，
+          整体为简约白色风格。
+        </div>
+
+        <a href="#" class="btn">查看详情</a>
+      </div>
+    </div>
+
+
+
+
+  </section>
+
+</body>
+</html>
