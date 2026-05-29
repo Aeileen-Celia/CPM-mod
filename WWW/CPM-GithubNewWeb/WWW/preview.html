@@ -359,9 +359,143 @@
     </div>
 
 
+/* 分页 */
 
+.pagination{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  margin:40px 0 80px;
+  flex-wrap:wrap;
+}
+
+.pagination button{
+  min-width:42px;
+  height:42px;
+  border:none;
+  background:#f5f5f5;
+  border-radius:10px;
+  cursor:pointer;
+  transition:0.2s;
+  font-size:15px;
+}
+
+.pagination button:hover{
+  background:#111;
+  color:#fff;
+}
+
+.pagination button.active{
+  background:#111;
+  color:#fff;
+}
 
   </section>
+
+<!-- 分页 -->
+<div class="pagination" id="pagination"></div>
+
+
+<script>
+
+const cardsPerPage = 20;
+
+const cards = document.querySelectorAll('.card');
+
+const pagination = document.getElementById('pagination');
+
+let currentPage = 1;
+
+function showPage(page){
+
+    currentPage = page;
+
+    const start = (page - 1) * cardsPerPage;
+
+    const end = start + cardsPerPage;
+
+    cards.forEach((card,index)=>{
+
+        if(index >= start && index < end){
+            card.style.display = 'block';
+        }else{
+            card.style.display = 'none';
+        }
+
+    });
+
+    renderPagination();
+}
+
+function renderPagination(){
+
+    pagination.innerHTML = '';
+
+    const totalPages = Math.ceil(cards.length / cardsPerPage);
+
+    /* 上一页 */
+
+    const prevBtn = document.createElement('button');
+
+    prevBtn.innerText = '上一页';
+
+    prevBtn.onclick = ()=>{
+
+        if(currentPage > 1){
+            showPage(currentPage - 1);
+        }
+
+    };
+
+    pagination.appendChild(prevBtn);
+
+    /* 页码 */
+
+    for(let i=1;i<=totalPages;i++){
+
+        const btn = document.createElement('button');
+
+        btn.innerText = i;
+
+        if(i === currentPage){
+            btn.classList.add('active');
+        }
+
+        btn.onclick = ()=>{
+            showPage(i);
+        };
+
+        pagination.appendChild(btn);
+
+    }
+
+    /* 下一页 */
+
+    const nextBtn = document.createElement('button');
+
+    nextBtn.innerText = '下一页';
+
+    nextBtn.onclick = ()=>{
+
+        if(currentPage < totalPages){
+            showPage(currentPage + 1);
+        }
+
+    };
+
+    pagination.appendChild(nextBtn);
+
+}
+
+/* 初始化 */
+
+showPage(1);
+
+</script>
+
+
 
 </body>
 </html>
