@@ -1,0 +1,206 @@
+/* style.css */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Microsoft YaHei",sans-serif;
+}
+
+body{
+    background:#ffffff;
+    color:#333;
+}
+
+/* 顶部导航 */
+
+.navbar{
+    width:100%;
+    height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 60px;
+    border-bottom:1px solid #eaeaea;
+    background:#fff;
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#666;
+    transition:0.2s;
+}
+
+.nav-links a:hover{
+    color:#000;
+}
+
+/* 顶部标题 */
+
+.hero{
+    text-align:center;
+    padding:80px 20px 50px;
+}
+
+.hero h1{
+    font-size:52px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:#777;
+    font-size:18px;
+}
+
+/* 卡片区域 */
+
+.container{
+    width:100%;
+    max-width:1300px;
+    margin:auto;
+    padding:20px;
+
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fill,minmax(260px,1fr));
+
+    gap:25px;
+}
+
+/* 卡片 */
+
+.card{
+    background:#fff;
+    border:1px solid #ececec;
+    border-radius:16px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.08);
+}
+
+.card img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    background:#f5f5f5;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-title{
+    font-size:22px;
+    font-weight:600;
+    margin-bottom:12px;
+}
+
+.card-text{
+    color:#666;
+    line-height:1.8;
+    font-size:15px;
+}
+
+/* 按钮 */
+
+.btn{
+    display:inline-block;
+    margin-top:18px;
+    padding:11px 18px;
+
+    background:#111;
+    color:#fff;
+
+    text-decoration:none;
+
+    border-radius:10px;
+
+    transition:0.2s;
+}
+
+.btn:hover{
+    background:#333;
+}
+
+/* 分页 */
+
+.pagination{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin:50px 0 80px;
+}
+
+.pagination button{
+
+    min-width:45px;
+    height:45px;
+
+    border:none;
+
+    background:#f5f5f5;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:0.2s;
+
+    font-size:15px;
+}
+
+.pagination button:hover{
+    background:#111;
+    color:#fff;
+}
+
+.pagination button.active{
+    background:#111;
+    color:#fff;
+}
+
+/* 响应式 */
+
+@media(max-width:768px){
+
+    .navbar{
+        padding:0 20px;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .card img{
+        height:260px;
+    }
+
+}
